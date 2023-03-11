@@ -1,5 +1,3 @@
 #!/usr/bin/python3
 import os
-file = os.fdopen(1, 'w')
-file.write("#pythoniscool\n")
-file.close()
+os.write(1, b"#pythoniscool\n")
