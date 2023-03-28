@@ -28,3 +28,10 @@ class Square:
         """area method"""
     def area(self):
         return self.__size ** 2
+    """my print instance method prints ####"""
+    def my_print(self):
+        if self.__size == 0:
+            print()
+            """rprinting hashes"""
+        for i in range(self.__size):
+            print("#" * self.__size)
