@@ -3,7 +3,6 @@ class Square:
     def __init__(self, size=0, position=(0, 0)):
         self.__size = size
         self.__position = position
-
     """position property"""
     @property
     def position(self):
@@ -11,7 +10,7 @@ class Square:
     """position setter"""
     @position.setter
     def position(self, value):
-        if not isinstance(position, int>0):
+        if not isinstance(position, int > 0):
             raise TypeError("position must be a tuple of 2 positive integers")
 
     """property"""
@@ -36,6 +35,7 @@ class Square:
     def area(self):
         return self.__size ** 2
     """my print instance method prints ####"""
+
     def my_print(self):
         if self.__size == 0:
             print()
