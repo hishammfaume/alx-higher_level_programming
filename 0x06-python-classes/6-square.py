@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+"""classof sqaures"""
+
+
 class Square:
     """defning the private insatance"""
     def __init__(self, size=0, position=(0, 0)):
