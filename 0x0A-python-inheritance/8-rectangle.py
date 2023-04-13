@@ -1,9 +1,9 @@
-#!/usr/bin/pyhton3
+#!/usr/bin/python3
 """class inheritance"""
 
 BaseGeometry = __import__("7-base_geometry").BaseGeometry
 
-"""rectangle rep"""
+"""class rectangle rep"""
 
 class Rectangle(BaseGeometry):
     """defining the rectanglr"""
