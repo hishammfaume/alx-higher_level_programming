@@ -46,7 +46,7 @@ class Rectangle(Base):
             return self.__height
 
         @height.setter
-        def heigth(self, value):
+        def height(self, value):
             """checking for int"""
 
             if not isinstance(value, int):
@@ -89,3 +89,7 @@ class Rectangle(Base):
                 raise ValueError("y must be >= 0")
             else:
                 self.__y = value
+
+    """public method for area"""
+    def area(self):
+        return self.__height * self.__width
