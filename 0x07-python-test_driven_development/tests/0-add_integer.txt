@@ -1,10 +1,54 @@
-import unittest
-import 0-add_integer
+The ``0-add_integer`` module
+==========================
 
-class TestAdd(unittest.TestCase):
-    def test_add(self):
-        result = 0-add_integer.add(0, 0)
-        self.assertEqual(result, 0)
+Using ``add_integer`` 
+------------------
 
-if __name__ = "__main__":
-    unittest.main()
+import function from the module
+>>> add_integer = __import__("0-add_integer").add_integer
+
+check module docstring
+>>> m = __import__("0-add_integer").__doc__
+>>len(m) > 1
+True
+
+check function docstring
+>>> f = __import__("0-add_integer").add_integer.__doc__
+>>> len(f) > 1
+True
+
+checking for wrong inputs on a
+>>> add_integer("hey", 2)
+Traceback (most recent call last)
+...
+TypeError: a must be an integer
+
+checking for wrong inputs on a
+>>> add_integer(None, 2)
+Traceback (most recent call last)
+...
+TypeError: a must be an integer
+
+checking for wrong inputs on b
+>>> add_integer(2, None)
+Traceback (most recent call last)
+...
+TypeError: a must be an integer
+
+checking for wrong arguments in b
+>>> add_integer(2, "hi")
+Traceback (most recent call last)
+...
+TypeError: b must be an integer
+
+checking normal inputs
+>>> add_integer(2, 3)
+5
+
+for single inputs
+>>> add_integer(2)
+100
+
+for negative characters
+>>> add_integer(100, -2)
+98
