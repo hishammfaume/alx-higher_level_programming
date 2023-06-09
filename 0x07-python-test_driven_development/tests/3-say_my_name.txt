@@ -1,0 +1,50 @@
+The ``3-say_my_name`` module
+==========================
+
+Using ``say_my_name``
+------------------
+
+Import the module
+>>> say_my_name = __import__("3-say_my_name").say_my_name
+
+Check module docstring
+>>> m = __import__("3-say_my_name").__doc__
+>>> len(m) > 1
+True
+
+Check function docstring
+>>> f = __import__("3-say_my_name").say_my_name._doc__
+>>> len(f) > 1
+True
+
+checking for non argument in a
+>>> say_my_name(None, "hisham")
+Traceback (most recent last call)
+...
+TypeError: first_name must be a string
+
+checking for second name
+>>> say_my_name("hisham", None)
+Traceback (most recent last call)
+...
+TypeError: last_name must be a string
+
+checking for invalid input a
+>>> say_my_name(2, "hisham")
+Traceback (most recent last call)
+...
+TypeError: first_name must be a string
+
+checking for invalid input b
+>>> say_my_name("hisham", 2)
+Traceback (most recent last call)
+...
+TypeError: last_name must be a string
+
+checking for single input
+>>> say_my_name("hisham")
+My name is hisham
+
+checking correct outpt
+>>> say_my_name("hisham", "ismail")
+My name is hisham ismail
