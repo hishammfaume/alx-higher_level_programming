@@ -1,0 +1,56 @@
+the ``4-print_square`` module
+=============================
+
+using ``print_square`` function
+-----------------------------
+
+importing the module
+>>> print_square = __import__("4-print_square").print_square
+
+checking the docsrtring in module
+>>> m = __import__("4-print_square").__doc__
+>>> len(m) > 1
+True
+
+checking the docstring in the finction
+>>> f = __import__("4-print_square").print_square.__doc__
+>>> len(f) > 1
+True
+
+string input
+>>> print_square("dd")
+Traceback (most recent last call)
+...
+TypeError: size must be an integer
+
+less that 0
+>>> print_square(-1)
+Traceback (most recent last call)
+...
+ValueError: size must be >= 0
+
+float input
+>>> print_square(-0.2)
+Traceback (most recent call back)
+...
+TypeError: size must be an integer
+
+normal integer
+>>> print_integer(4)
+####
+####
+####
+####
+
+no argument
+>>> print_square()
+Traceback (most recent last call)
+...
+TypeError: print_square() takes 1 positional argument but none was given
+
+two arguments
+>>> print_square(2,2)
+Traceback (most recent last call)
+...
+TypeError: print_square() takes 1 positional argument but two were given
+
